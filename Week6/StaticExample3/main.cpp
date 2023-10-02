@@ -18,6 +18,7 @@ void ExampleTests(){
   delete iP2;
   iP1->print( );
 
+  
   int i = iP1->getNumberOfItems();
   std::cout << "Check!" << i << std::endl;
 
@@ -45,7 +46,7 @@ void MoreTests(){
 
 int main (int argc, char *argv[]) { 
   std::cout << "Started Example Tests " << std::endl;
-  //ExampleTests();
+  ExampleTests();
   std::cout << "Completed Example Tests " << std::endl << std::endl;
 
    MoreTests();

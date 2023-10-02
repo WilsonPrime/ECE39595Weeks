@@ -31,21 +31,30 @@ void ExampleTests(){
 
 }
 
-void Test(Item item){
+void Test(Item item){ // created a third one since pass by value 
+  std::cout << "Start Test" << std::endl;
   std::cout << "numItems = " << Item::getNumberOfItems() << std::endl;
+  std::cout << "End Test" << std::endl;
 }
 
 void MoreTests(){
   Item item(18,34);
-  std::cout << "numItems = " << Item::getNumberOfItems() << std::endl;
+  ItemD itemD(19,35);
 
-  Test(item);
-  std::cout << "numItems = " << Item::getNumberOfItems() << std::endl;
+  std::cout << "numItems for Item = " << Item::getNumberOfItems() << std::endl;
+  std::cout << "numItems for ItemD = " << ItemD::getNumberOfItems() << std::endl;
+  // These should be the same 
+  std::cout << "Total for Item = " << Item::getTotal() << std::endl;
+  //std::cout << "Total for ItemD = " << ItemD::getTotal() << std::endl;
+ // Test(item);
+  // back to two because the destructor was called 
+  //std::cout << "numItems = " << Item::getNumberOfItems() << std::endl;
+  //std::cout << "End" << std::endl;
 }
 
 int main (int argc, char *argv[]) { 
   std::cout << "Started Example Tests " << std::endl;
-  //  ExampleTests();
+  //ExampleTests();
   std::cout << "Completed Example Tests " << std::endl << std::endl;
 
   MoreTests();
