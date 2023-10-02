@@ -41,6 +41,15 @@ void Item::print( ) {
 }
 
 
+void Item::incrementBaseTotal() { // increments the total 
+        total++;
+    }
+
+    void Item::decrementBaseTotal() { // increments the total 
+        total--;
+    }
+
+
 
 
 
@@ -88,11 +97,12 @@ ItemD::ItemD(int i, float p) : itemNum(i), price(p) { // increments the static v
    Item::incrementBaseTotal();
 }
 
-/*ItemD::ItemD(const ItemD& item){ // copy consturctor 
+ItemD::ItemD(const ItemD& item){ // copy consturctor 
    this->itemNum = item.itemNum;
    this->price = item.price;
    numberOfItems++;
-}*/
+   Item::incrementBaseTotal();
+}
 
 
 

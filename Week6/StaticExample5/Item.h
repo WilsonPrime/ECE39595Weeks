@@ -10,13 +10,9 @@ public:
    static int getNumberOfItems( );
    static int getTotal();
 
-    void incrementBaseTotal() { // increments the total 
-        total++;
-    }
-
-    void decrementBaseTotal() { // increments the total 
-        total--;
-    }
+    void incrementBaseTotal(); // increments the total 
+    void decrementBaseTotal();  // increments the total 
+    
     
 private: // "private" to make explicit
    static int numberOfItems; // this is related to the number of Items there are 
@@ -32,7 +28,7 @@ class ItemD : public Item {
 public:
     ItemD();
     ItemD(int, float);
-    ItemD(const Item&);
+    ItemD(const ItemD&);
      ~ItemD() override;
     void print() override;
     static int getNumberOfItems( ); // this return the number of ItemD, unrelated to the base class one
